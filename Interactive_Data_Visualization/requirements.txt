@@ -3,3 +3,4 @@ seaborn
 pywaffle
 squarify
 scipy
+plotly
