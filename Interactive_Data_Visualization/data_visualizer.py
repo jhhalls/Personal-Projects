@@ -206,7 +206,7 @@ if select_no_of_variables == "Univariate Analysis - Analyse Single column":
         st.markdown("The Following are the :orange[Categorical Columns] in the current data: ")
         st.write(categorical_df.columns)
         
-        st.write(":orange-background[Let's Begin :blue[**Categorical Visualization**]]")
+        st.write(":orange-background[Let's Begin with the  :blue[**Categorical Visualization**]]")
         col1, col2 = st.columns(2)
         with col1:
             select_categorical_col = st.selectbox(label="Select columns", 
