@@ -160,8 +160,8 @@ if selected_option_2 == "Describe":
         st.write(describe)
     # st.write(describe)
 elif selected_option_2 == "Info":
-    buffer = StringIO()
-    data_info = df.info(buf=buffer)
+    buffer = io.StringIO()
+    df.info(buf=buffer)
     buffer_get_value = buffer.get_value()
     st.write(buffer_get_value)
 elif selected_option_2 == "Null Values":
