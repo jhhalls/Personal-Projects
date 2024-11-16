@@ -38,11 +38,8 @@ st.subheader("Upload the Raw Data (csv file)")
 with st.spinner("Please wait..."):
     uploaded_file = st.file_uploader("Select a file")
                                      
-if uploaded_file is not None:
-    # dataframe
-    global df 
-    df = pd.read_csv(uploaded_file, on_bad_lines=  "skip", encoding="utf-8")
-    st.markdown(""":rainbow[Data loaded Successfully]""")
+df = pd.read_csv(uploaded_file, on_bad_lines=  "skip", encoding="utf-8")
+st.markdown(""":rainbow[Data loaded Successfully]""")
 st.write("---")
 # ============================ Have a Look into the data============================
 # upload data
