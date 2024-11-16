@@ -2,8 +2,8 @@ import io
 
 def get_df_info(df):
      buffer = io.StringIO()
-     df.info (buf=buffer)
-     lines = buffer.getvalue ().split ('\n')
+     df.info(buf=buffer)
+     lines = buffer.getvalue().split('\n')
      # lines to print directly
      lines_to_print = [0, 1, 2, -2, -3]
      for i in lines_to_print:
