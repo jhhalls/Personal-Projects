@@ -21,7 +21,8 @@ from bivariate_plots import scatter_plot, line_plot, joint_plot, hexbin_plot, kd
 from bivariate_plots import regplot, swarm_plot, strip_plot, lollipop_plot, bubble_chart, step_plot
 # multivariate plot
 from multivariate_plots  import scatter_matrix_plot
-
+# set the page layout to fit the width of the webpage
+st.set_page_config(layout="wide")
 
 print("import successfull")
 
