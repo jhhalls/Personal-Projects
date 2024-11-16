@@ -24,7 +24,8 @@ from multivariate_plots  import scatter_matrix_plot
 # set the page layout to fit the width of the webpage
 st.set_page_config(layout="wide")
 
-print("import successfull")
+st.write("All imports are successful.")
+st.write("The environment is ready to upload your data")
 
 st.write("""
          # No Code Machine Learning App
