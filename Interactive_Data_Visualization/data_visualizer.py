@@ -11,6 +11,8 @@ from io import StringIO
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+# cosmetic displays
+from cosmetic_display import get_df_info
 # Categorical PLots
 from categorical_plots import bar_chart, pie_chart, donut_chart, pareto_chart, count_plot
 from categorical_plots import frequency_table, waffle_chart, tree_map, heatmap, dot_plot, bubble_chart
@@ -163,7 +165,7 @@ elif selected_option_2 == "Info":
     buffer = io.StringIO()
     df.info(buf=buffer)
     buffer_get_value = buffer.getvalue()
-    st.write(buffer_get_value)
+    get_df_info(busffer_get_value)
 elif selected_option_2 == "Null Values":
     null_data = df.isna().sum()
     total_null = df.isna().sum().sum()
