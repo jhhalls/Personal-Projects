@@ -162,7 +162,7 @@ if selected_option_2 == "Describe":
 elif selected_option_2 == "Info":
     buffer = io.StringIO()
     df.info(buf=buffer)
-    buffer_get_value = buffer.get_value()
+    buffer_get_value = buffer.getvalue()
     st.write(buffer_get_value)
 elif selected_option_2 == "Null Values":
     null_data = df.isna().sum()
