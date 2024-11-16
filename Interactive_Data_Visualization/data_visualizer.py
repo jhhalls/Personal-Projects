@@ -162,7 +162,7 @@ elif selected_option_2 == "Info":
     buffer = StringIO()
     data_info = df.info(verbose= True, buf=buffer)
     buffer_get_value = buffer.get_value()
-    st.write(buffer_get_value)
+    st.text(buffer_get_value)
 elif selected_option_2 == "Null Values":
     null_data = df.isna().sum()
     total_null = df.isna().sum().sum()
