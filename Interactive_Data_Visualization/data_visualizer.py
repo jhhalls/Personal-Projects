@@ -32,7 +32,7 @@ st.write("""
          # No Code Machine Learning App
          """)
 
-st.subheader("Upload the Raw Data")
+st.subheader("Upload the Raw Data (csv file)")
 with st.spinner("Please wait..."):
     uploaded_file = st.file_uploader("Select a file")
                                      
