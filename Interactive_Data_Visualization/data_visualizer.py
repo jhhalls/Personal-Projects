@@ -131,21 +131,24 @@ if selected_option_2 == "Describe":
     col1, col2, col3 = st.columns(3)
     with col1:
         label_1 = "Continuous Cols"
-        checkbox_describe_1 = st.checkbox(label=label_1, help="These are the columns that contains real numbers that can be displayed on a Number Line")
+        checkbox_describe_1 = st.checkbox(label=label_1, 
+                                          help="These are the columns that contains real numbers that can be displayed on a Number Line")
     with col2:
         label_2 = "Categorical Cols"
-        checkbox_describe_2 = st.checkbox(label=label_2, help="Columns containing categories. Eg. Male/Female")
+        checkbox_describe_2 = st.checkbox(label=label_2, 
+                                          help="Columns containing categories. Eg. Male/Female")
     with col3:
         label_3 = "All Cols"
-        checkbox_describe_3 = st.checkbox(label=label_3, help="All the columns are taken and both the previous checkkbox results are combined.")
+        checkbox_describe_3 = st.checkbox(label=label_3, 
+                                          help="All the columns are taken and both the previous checkkbox results are combined.")
 
     if checkbox_describe_1:
-        selected_option = st.write("You selected the option :", label_1 )     # print the sleected label
+        selected_option = st.write("You selected the option :", label_1 )     # print the selected label
         describe = df.describe(include=[np.number]).T                         # count, mean, quartiles, min, max
         st.write(describe)                                                    # display describe
     elif checkbox_describe_2:
         try:
-            selected_option = st.write("You selected the option :", label_2 )     # print the sleected label
+            selected_option = st.write("You selected the option :", label_2 )     # print the selected label
             describe = df.describe(include=['O']).T                               # count, #Unique, Mode, freq of mode
             st.write(describe)                                                        # display describe
         except:
@@ -156,8 +159,10 @@ if selected_option_2 == "Describe":
         st.write(describe)
     # st.write(describe)
 elif selected_option_2 == "Info":
-    data_info = df.info(verbose= True)
-    st.write(data_info)
+    buffer = StringIO()
+    data_info = df.info(verbose= True, buf=buffer)
+    buffer_get_value = buffer.get_value()
+    st.write(buffer_get_value)
 elif selected_option_2 == "Null Values":
     null_data = df.isna().sum()
     total_null = df.isna().sum().sum()
