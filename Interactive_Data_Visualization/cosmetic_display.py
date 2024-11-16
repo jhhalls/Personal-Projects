@@ -1,5 +1,7 @@
+import io
+
 def get_df_info(df):
-     buffer = io.StringIO ()
+     buffer = io.StringIO()
      df.info (buf=buffer)
      lines = buffer.getvalue ().split ('\n')
      # lines to print directly
